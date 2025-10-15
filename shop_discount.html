@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Title</title>
+		<style>
+		</style>
+		<script>
+		/*  -- simple method 
+		let price = Number(prompt("Enter price?"))
+		console.log(price)
+		if(price > 0 && price <= 4999){
+		      console.log(price);
+		}
+		else if (price > 5000 && price <=9999 ){
+		      console.log(((10*price)/100));
+					}
+					 else if (price > 10000 && price <=19999 ){
+		      console.log(((15*price)/100));
+					}
+					   else if (price > 20000 ){
+		      console.log(((20*price)/100));
+					}*/
+				/*	Advance - method*/
+		let price = Number(prompt("Enter price?"))
+		if (isNaN(price) || price < 0) {
+    console.log("Invalid price. Using 0.");
+    price = 0;
+}
+  let dis = 0
+	 if (price > 5000 && price <=9999 ){
+		             dis=10
+					}
+					 else if (price > 10000 && price <=19999 ){
+		          dis = 15
+					}
+					   else if (price > 20000 ){
+		           dis = 20
+					};
+				const	discountAmount = ((dis*price)/100)
+			 const totalPrice= price-discountAmount;
+		    console.log(`With ${dis}% discount applied! so Total amount is ${totalPrice}`)
+				
+		</script>
+</head>
+<body><hr>
+  
+</body>
+
+</html>
