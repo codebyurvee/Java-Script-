@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript Practice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    h2 {
+      color: #333;
+    }
+    pre {
+      background: #222;
+      color: #0f0;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    button {
+      margin: 5px 0;
+      padding: 8px 15px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🚀 JavaScript Learning Projects</h1>
+
+  <h2>1. Sum of Two Integers</h2>
+  <button onclick="sumTwoIntegers()">Try it</button>
+  <script>
+    function sumTwoIntegers() {
+      let a = parseInt(prompt("Enter first number:"));
+      let b = parseInt(prompt("Enter second number:"));
+      alert("Sum is: " + (a + b));
+    }
+  </script>
+
+  <h2>2. String and Integer Relation</h2>
+  <pre>
+let num = 5;
+let str = "5";
+console.log(num + str); // "55"
+console.log(num + Number(str)); // 10
+  </pre>
+
+  <h2>3. Swap Variables (3 Methods)</h2>
+
+  <h3>Method 1: Using Temp Variable</h3>
+  <pre>
+let a = 10, b = 20;
+let temp = a;
+a = b;
+b = temp;
+  </pre>
+
+  <h3>Method 2: Using Arithmetic</h3>
+  <pre>
+let a = 10, b = 20;
+a = a + b;
+b = a - b;
+a = a - b;
+  </pre>
+
+  <h3>Method 3: Using Destructuring</h3>
+  <pre>
+let a = 10, b = 20;
+[a, b] = [b, a];
+  </pre>
+
+  <h2>4. Math Functions & Real-world Problems</h2>
+
+  <h3>• Circumference of a Circle</h3>
+  <button onclick="circleCircumference()">Calculate</button>
+  <script>
+    function circleCircumference() {
+      let radius = parseFloat(prompt("Enter radius:"));
+      let c = 2 * Math.PI * radius;
+      alert("Circumference is: " + c.toFixed(2));
+    }
+  </script>
+
+  <h3>• Area of Triangle (Heron's Formula)</h3>
+  <button onclick="triangleArea()">Calculate</button>
+  <script>
+    function triangleArea() {
+      let a = parseFloat(prompt("Enter side a:"));
+      let b = parseFloat(prompt("Enter side b:"));
+      let c = parseFloat(prompt("Enter side c:"));
+      let s = (a + b + c) / 2;
+      let area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+      alert("Area of triangle is: " + area.toFixed(2));
+    }
+  </script>
+
+  <h3>• Area of Rectangle</h3>
+  <button onclick="rectangleArea()">Calculate</button>
+  <script>
+    function rectangleArea() {
+      let l = parseFloat(prompt("Enter length:"));
+      let w = parseFloat(prompt("Enter width:"));
+      alert("Area of rectangle is: " + (l * w));
+    }
+  </script>
+
+</body>
+</html>
